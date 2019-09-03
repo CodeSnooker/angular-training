@@ -7,6 +7,7 @@ import { TestComponent } from './test/test.component';
 import { InputComponentComponent } from './input-component/input-component.component';
 import { OutputComponentComponent } from './output-component/output-component.component';
 import { LocalVariableComponent } from './local-variable/local-variable.component';
+import { ViewChildComponent } from './view-child/view-child.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { LocalVariableComponent } from './local-variable/local-variable.componen
     TestComponent,
     InputComponentComponent,
     OutputComponentComponent,
-    LocalVariableComponent
+    LocalVariableComponent,
+    ViewChildComponent
   ],
   imports: [
     BrowserModule,
