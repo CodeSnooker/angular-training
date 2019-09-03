@@ -8,6 +8,8 @@ import { ViewChildComponent } from "./view-child/view-child.component";
   styleUrls: ["./app.component.css"]
 })
 export class AppComponent implements AfterViewInit {
+  allowed = false;
+
   @ViewChild(ViewChildComponent, { static: false })
   private vc: ViewChildComponent;
 
