@@ -8,6 +8,7 @@ import { InputComponentComponent } from './input-component/input-component.compo
 import { OutputComponentComponent } from './output-component/output-component.component';
 import { LocalVariableComponent } from './local-variable/local-variable.component';
 import { ViewChildComponent } from './view-child/view-child.component';
+import { BackgroundDirective } from './background.directive';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ViewChildComponent } from './view-child/view-child.component';
     InputComponentComponent,
     OutputComponentComponent,
     LocalVariableComponent,
-    ViewChildComponent
+    ViewChildComponent,
+    BackgroundDirective
   ],
   imports: [
     BrowserModule,
