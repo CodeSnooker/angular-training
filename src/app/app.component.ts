@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ViewChild } from "@angular/core";
+import { AfterViewInit, Component, OnInit, ViewChild } from "@angular/core";
 import { ParentChild } from "./parent-child.interface";
 import { ViewChildComponent } from "./view-child/view-child.component";
 
@@ -7,7 +7,7 @@ import { ViewChildComponent } from "./view-child/view-child.component";
   templateUrl: "./app.component.html",
   styleUrls: ["./app.component.css"]
 })
-export class AppComponent implements AfterViewInit {
+export class AppComponent implements AfterViewInit, OnInit {
   allowed = false;
 
   @ViewChild(ViewChildComponent, { static: false })
@@ -30,6 +30,16 @@ export class AppComponent implements AfterViewInit {
   ];
 
   constructor() {}
+
+  ngOnInit(): void {
+    console.log("#on Init");
+    // this.todoService
+    //   .get()
+    //   .toPromise()
+    //   .then(d => {
+    //     console.log("#App Module", d);
+    //   });
+  }
 
   ngAfterViewInit(): void {
     this.vc.testInVC();
