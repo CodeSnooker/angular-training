@@ -20,6 +20,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { HomeComponent } from './home/home.component';
     ProfileComponent,
     ShoppingListComponent,
     RegistrationComponent,
-    HomeComponent
+    HomeComponent,
+    LoginComponent
   ],
   imports: [BrowserModule, HttpClientModule, AppRoutingModule, TodosModule],
   providers: [],

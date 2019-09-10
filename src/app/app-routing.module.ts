@@ -1,5 +1,6 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
+import { AuthGuard } from "./auth.guard";
 import { HomeComponent } from "./home/home.component";
 import { ProfileComponent } from "./profile/profile.component";
 import { RegistrationComponent } from "./registration/registration.component";
@@ -12,6 +13,7 @@ const routes: Routes = [
   {
     path: "users",
     component: UserComponent,
+    canActivate: [AuthGuard],
 
     children: [
       { path: "registration", component: RegistrationComponent },
@@ -19,7 +21,11 @@ const routes: Routes = [
       { path: ":id/edit", component: UserEditComponent, pathMatch: "full" }
     ]
   },
-  { path: "shopping-list", component: ShoppingListComponent },
+  {
+    path: "shopping-list",
+    component: ShoppingListComponent,
+    canActivate: [AuthGuard]
+  },
   { path: "", component: HomeComponent, pathMatch: "full" },
   { path: "**", redirectTo: "/" }
 ];
