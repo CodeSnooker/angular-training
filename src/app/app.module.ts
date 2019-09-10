@@ -10,6 +10,9 @@ import { OutputComponentComponent } from "./output-component/output-component.co
 import { TestComponent } from "./test/test.component";
 import { TodosModule } from "./todos/todos.module";
 import { ViewChildComponent } from "./view-child/view-child.component";
+import { BorderDirective } from './border.directive';
+import { BoldPipe } from './bold.pipe';
+import { TimestampPipe } from './timestamp.pipe';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import { ViewChildComponent } from "./view-child/view-child.component";
     OutputComponentComponent,
     LocalVariableComponent,
     ViewChildComponent,
-    BackgroundDirective
+    BackgroundDirective,
+    BorderDirective,
+    BoldPipe,
+    TimestampPipe
   ],
   imports: [BrowserModule, HttpClientModule, AppRoutingModule, TodosModule],
   providers: [],

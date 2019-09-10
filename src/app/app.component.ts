@@ -13,7 +13,7 @@ export class AppComponent implements AfterViewInit, OnInit {
   @ViewChild(ViewChildComponent, { static: false })
   private vc: ViewChildComponent;
 
-  title = "cookbook-demo";
+  title = "Smitha";
   children: ParentChild[] = [
     {
       master: "Paras",
