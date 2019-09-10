@@ -1,0 +1,31 @@
+<p>profile-editor works!</p>
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+  <label>
+    First Name:
+    <input type="text" formControlName="firstName" required />
+  </label>
+
+  <label>
+    Last Name:
+    <input type="text" formControlName="lastName" />
+  </label>
+
+  <button type="submit" [disabled]="!profileForm.valid">Submit</button>
+
+  <div formArrayName="aliases">
+    <h3>Aliases</h3>
+    <button (click)="addAlias()">Add Alias</button>
+
+    <div *ngFor="let address of aliases.controls; let i = index">
+      <!-- The repeated alias template -->
+      <label>
+        Alias:
+        <input type="text" [formControlName]="i" />
+      </label>
+    </div>
+  </div>
+</form>
+
+<hr />
+{{ profileForm.value | json }}
+<hr />
