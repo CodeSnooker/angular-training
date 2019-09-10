@@ -1,0 +1,24 @@
+<p>user works!</p>
+
+<h1>User Nav Bar</h1>
+<nav>
+  <a routerLink="/users/registration" routerLinkActive="active bold"
+    >Registration</a
+  >
+  |
+  <a [routerLink]="['/users', userId]" routerLinkActive="active bold"
+    >Profile 2</a
+  >
+  |
+  <a [routerLink]="['/users', 1]" routerLinkActive="active bold">Profile 1</a>
+  |
+  <a [routerLink]="['/users', 3]" routerLinkActive="active bold">Profile 3</a>
+  |
+  <a [routerLink]="['/users', userId, 'edit']" routerLinkActive="active bold"
+    >Edit</a
+  >
+  |
+</nav>
+<p appBorder="blue">
+  <router-outlet></router-outlet>
+</p>

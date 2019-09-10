@@ -13,6 +13,13 @@ import { ViewChildComponent } from "./view-child/view-child.component";
 import { BorderDirective } from './border.directive';
 import { BoldPipe } from './bold.pipe';
 import { TimestampPipe } from './timestamp.pipe';
+import { UserComponent } from './user/user.component';
+import { UserListComponent } from './user-list/user-list.component';
+import { UserEditComponent } from './user-edit/user-edit.component';
+import { ProfileComponent } from './profile/profile.component';
+import { ShoppingListComponent } from './shopping-list/shopping-list.component';
+import { RegistrationComponent } from './registration/registration.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +32,14 @@ import { TimestampPipe } from './timestamp.pipe';
     BackgroundDirective,
     BorderDirective,
     BoldPipe,
-    TimestampPipe
+    TimestampPipe,
+    UserComponent,
+    UserListComponent,
+    UserEditComponent,
+    ProfileComponent,
+    ShoppingListComponent,
+    RegistrationComponent,
+    HomeComponent
   ],
   imports: [BrowserModule, HttpClientModule, AppRoutingModule, TodosModule],
   providers: [],

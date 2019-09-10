@@ -3,6 +3,7 @@ import { Injectable } from "@angular/core";
 import { Observable, of } from "rxjs";
 import { catchError, tap } from "rxjs/operators";
 import { TodoList } from "./todo-list/todo-list.model";
+import { Todo } from "./todo/todo.model";
 
 @Injectable()
 export class TodoService {
@@ -19,6 +20,14 @@ export class TodoService {
       tap(_ => console.log("Fetched Todo items")),
       tap(_ => this.update()),
       catchError(this.handleError<TodoList>("getItems", []))
+    );
+  }
+
+  getById(todoId: number): Observable<Todo> {
+    const url = `https://jsonplaceholder.typicode.com/todos/${todoId}`;
+    return this.http.get<Todo>(url).pipe(
+      tap(_ => console.log("Fetched Todo items with id" + todoId)),
+      catchError(this.handleError<Todo>("getItems", undefined))
     );
   }
 
